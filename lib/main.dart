@@ -115,7 +115,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
   // More advanced TableCalendar configuration (using Builders & Styles)
   Widget _buildTableCalendarWithBuilders() {
     return TableCalendar(
-      locale: 'en',
+      locale: 'en-us',
       rowHeight: 100,
       calendarController: _calendarController,
       initialCalendarFormat: CalendarFormat.month,
