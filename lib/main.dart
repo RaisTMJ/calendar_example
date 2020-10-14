@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:table_calendar/table_calendar.dart';
+
 var ExampleEvents = [
   {
     "eventName": "Bathroom Modification",
@@ -114,9 +115,29 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
 
   // More advanced TableCalendar configuration (using Builders & Styles)
   Widget _buildTableCalendarWithBuilders() {
+    final Size size = MediaQuery.of(context).size;
+    double dateBoxSize = (size.width - 16) / 7;
+    double rowHeight = (size.height - 250) / 5;
+
+    Map<DateTime, List> _events;
+    final _selectedDay = DateTime.now();
+
+    _events = {
+      _selectedDay.subtract(Duration(days: -1)): [
+        {'width': 3.0, 'position': 2.0, 'task': 'harro what are'},
+        {'width': 4.0, 'position': 1.0, 'task': 'This is My second Irem'},
+      ],
+
+      _selectedDay.subtract(Duration(days: 5)): [
+        {'width': 3.0, 'position': 2.0, 'task': 'Third a'},
+        {'width': 4.0, 'position': 1.0, 'task': 'third b'},
+      ],
+    };
+
     return TableCalendar(
       locale: 'en-us',
-      rowHeight: 100,
+      events: _events,
+      rowHeight: rowHeight,
       calendarController: _calendarController,
       initialCalendarFormat: CalendarFormat.month,
       formatAnimation: FormatAnimation.slide,
@@ -141,40 +162,10 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
       builders: CalendarBuilders(
         dayBuilder: (context, date, _) {
           return Container(
-            margin: const EdgeInsets.all(.5),
-            padding: const EdgeInsets.only(top: 5.0, left: 6.0),
-            color: Colors.yellow[300],
-            width: 100,
-            height: 100,
-            child: Text(
-              '${date.day}',
-              style: TextStyle().copyWith(fontSize: 16.0),
-            ),
-          );
-        },
-        selectedDayBuilder: (context, date, _) {
-          return FadeTransition(
-            opacity: Tween(begin: 0.0, end: 1.0).animate(_animationController),
-            child: Container(
-              margin: const EdgeInsets.all(4.0),
-              padding: const EdgeInsets.only(top: 5.0, left: 6.0),
-              color: Colors.yellow[300],
-              width: 100,
-              height: 100,
-              child: Text(
-                '${date.day}',
-                style: TextStyle().copyWith(fontSize: 16.0),
-              ),
-            ),
-          );
-        },
-        todayDayBuilder: (context, date, _) {
-          return Container(
-            margin: const EdgeInsets.all(4.0),
-            padding: const EdgeInsets.only(top: 5.0, left: 6.0),
-            color: Colors.amber[400],
-            width: 100,
-            height: 100,
+            width: dateBoxSize,
+            height: rowHeight,
+            decoration: BoxDecoration(
+                border: Border.all(width: .2), color: Colors.white),
             child: Text(
               '${date.day}',
               style: TextStyle().copyWith(fontSize: 16.0),
@@ -182,7 +173,53 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
           );
         },
         markersBuilder: (context, date, events, holidays) {
-          final children = <Widget>[];
+          final children = <Widget>[
+            Stack(
+              overflow: Overflow.visible,
+              children: [
+                for (var event in events)
+                  Positioned(
+                    right: 0,
+                    bottom: 3 + (event["position"] * 30) - 30,
+                    child: GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            _calendarController
+                                .setCalendarFormat(CalendarFormat.twoWeeks);
+                          });
+                        },
+                        behavior: HitTestBehavior.deferToChild,
+                        child: Container(
+                          margin: EdgeInsets.only(top: 3, bottom: 3, right: 2),
+                          color: Colors.white,
+                          child: Container(
+                            width: dateBoxSize * event['width'] -
+                                ((event['width'] > 1) ? 10 : 2.5),
+                            height: 25,
+                            alignment: Alignment.centerLeft,
+                            padding: ((event['width'] > 1)
+                                ? EdgeInsets.only(left: 10)
+                                : EdgeInsets.only(left: 5)),
+                            decoration: BoxDecoration(
+                              color: Theme.of(context)
+                                  .secondaryHeaderColor
+                                  .withOpacity(.2),
+                              shape: BoxShape.rectangle,
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(2)),
+                            ),
+                            // change to double
+                            child: Text(
+                              event["task"],
+                              style: Theme.of(context).textTheme.headline5,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ),
+                        )),
+                  ),
+              ],
+            )
+          ];
           return children;
         },
       ),

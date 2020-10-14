@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="624aab35-38aa-4681-a4a0-7eea1cdee120" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,29 +37,81 @@
       <option name="presentableId" value="Default" />
       <updated>1602144670335</updated>
     </task>
+    <task id="LOCAL-00001" summary="delete comment">
+      <created>1602146538720</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1602146538720</updated>
+    </task>
+    <task id="LOCAL-00002" summary="fix localization">
+      <created>1602147309436</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1602147309436</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="delete comment" />
+    <MESSAGE value="fix localization" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix localization" />
+  </component>
   <component name="WindowStateProjectService">
-    <state width="1220" height="200" key="GridCell.Tab.0.bottom" timestamp="1602144947055">
+    <state x="277" y="0" key="CommitChangelistDialog2" timestamp="1602147308937">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1220" height="200" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1602144947055" />
-    <state width="1220" height="200" key="GridCell.Tab.0.center" timestamp="1602144947055">
+    <state x="277" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1602147308937" />
+    <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1602648733780">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1220" height="200" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1602144947055" />
-    <state width="1220" height="200" key="GridCell.Tab.0.left" timestamp="1602144947055">
+    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1602648733780" />
+    <state width="1220" height="155" key="GridCell.Tab.0.bottom" timestamp="1602650618162">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1220" height="200" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1602144947055" />
-    <state width="1220" height="200" key="GridCell.Tab.0.right" timestamp="1602144947055">
+    <state width="1220" height="155" key="GridCell.Tab.0.bottom/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1602650618162" />
+    <state width="1219" height="177" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1602157685455" />
+    <state width="1220" height="155" key="GridCell.Tab.0.center" timestamp="1602650618162">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1220" height="200" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1602144947055" />
-    <state width="498" height="408" key="SwitcherDM" timestamp="1602144740210">
+    <state width="1220" height="155" key="GridCell.Tab.0.center/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1602650618162" />
+    <state width="1219" height="177" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1602157685455" />
+    <state width="1220" height="155" key="GridCell.Tab.0.left" timestamp="1602650618162">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="498" height="408" key="SwitcherDM/0.0.1280.680@0.0.1280.680" timestamp="1602144740210" />
+    <state width="1220" height="155" key="GridCell.Tab.0.left/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1602650618162" />
+    <state width="1219" height="177" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1602157685455" />
+    <state width="1220" height="155" key="GridCell.Tab.0.right" timestamp="1602650618162">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1220" height="155" key="GridCell.Tab.0.right/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1602650618162" />
+    <state width="1219" height="177" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1602157685455" />
+    <state x="386" y="62" key="RollbackChangesDialog" timestamp="1602494446883">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="386" y="62" key="RollbackChangesDialog/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1602494446883" />
+    <state width="498" height="497" key="SwitcherDM" timestamp="1602155650172">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="498" height="497" key="SwitcherDM/0.0.1280.680@0.0.1280.680" timestamp="1602155650172" />
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1602147311325">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1602147311325" />
+    <state x="336" y="164" key="com.intellij.ide.util.TipDialog" timestamp="1602212482467">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="336" y="164" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1602212482467" />
+    <state x="269" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1602649251321">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="269" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1602649251321" />
+    <state x="297" y="153" width="672" height="677" key="run.anything.popup" timestamp="1602650673339">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="297" y="153" width="672" height="677" key="run.anything.popup/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1602650673339" />
     <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1602144742261">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
